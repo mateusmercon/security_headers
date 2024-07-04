@@ -18,6 +18,9 @@ COPY . /var/www/html/
 # Exponha a porta 8000
 EXPOSE 8000
 
+# Defina o ServerName globalmente para evitar o aviso
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Mude a porta do Apache para 8000
 RUN sed -i 's/80/8000/' /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
 
