@@ -5,7 +5,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 header("X-Content-Type-Options: nosniff");
 header("Referrer-Policy: no-referrer");
 header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;");
-
+header("Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()");
 ?>
 <!DOCTYPE html>
 <html lang="en">
